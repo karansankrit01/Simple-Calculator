@@ -1,0 +1,111 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header {
+    background-color: #1e1e2f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+body {
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Calculator container */
+.container {
+    background-color: #1e1e2f;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Display screen */
+#displayBox {
+    width: 100%;
+    height: 60px;
+    background-color: #29293d;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    text-align: right;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Keypad grid */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #3a3a4f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #50506a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Special buttons */
+button:nth-child(1), /* + */
+button:nth-child(5), /* - */
+button:nth-child(9), /* * */
+button:nth-child(13) /* / */ {
+    background-color: #ff9f43;
+}
+
+button:nth-child(13) { /* = */
+    background-color: #10ac84;
+    grid-column: span 2;
+}
+
+button:nth-child(14) { /* C */
+    background-color: #ee5253;
+}
+
+button:nth-child(14):hover {
+    background-color: #ff6b81;
+}
+/* button:nth-child(13):hover {
+    background-color: #1dd1a1;
+} */
+button:nth-child(1):hover,
+button:nth-child(5):hover,  /* +, - */
+button:nth-child(9):hover,  /* *, / */          
+button:nth-child(13):hover { /* = */
+    background-color: #ff9f43;
+}
+
+
